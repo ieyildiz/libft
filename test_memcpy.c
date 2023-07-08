@@ -2,7 +2,7 @@
 
 int main() {
     char source[] = "Vadi Istanbul";
-    char destination[20];
+    char destination[] = "F station 42";
 
     printf("before dest: %s\n", destination);
     printf("before source: %s\n", source);
