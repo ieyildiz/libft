@@ -6,7 +6,7 @@ void test(int size)
     char buffer[19] = "smthing";
     int r;
 
-    r = ft_strlcpy(buffer,string,size);
+    r = ft_strlcat(buffer,string,size);
 
     printf("Copied '%s' into '%s', length %d\n",
             string,
