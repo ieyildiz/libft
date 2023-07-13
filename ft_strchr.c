@@ -4,13 +4,12 @@ char    *ft_strchr(const char *s, int c)
 {
     char newC = (char)c;
 
-    while (*s != '\0')
+    for (int i = 0; s[i] != '\0'; i++)
     {
-        if (*s == newC)
+        if (s[i] == newC)
         {
-            return (char *)s;
+            return (char *)(s + i);
         }
-        s++;
     }
     
     return NULL;
