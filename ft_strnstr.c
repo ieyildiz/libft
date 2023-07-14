@@ -2,15 +2,22 @@
 
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    if (*haystack != '\0' || *needle != '\0')
+    size_t needle_len = ft_strlen(needle);
+
+    if (*needle == '\0')
     {
-        for(size_t i = 0; i < len; i++)
-        {
-            if (haystack[i] == needle[i])
-            {
-                return ((char *)(haystack + i));
-            }
-        }
+        return (char *)haystack;
     }
+
+    while((*haystack != '\0') && (len >= needle_len))
+    {
+        if (ft_updated_ft_strncmp(haystack, needle, needle_len) == 0)
+        {
+            return ((char *)(haystack));
+        }
+        haystack++;
+        len--;
+    }
+    
     return NULL;
 }
