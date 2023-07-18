@@ -2,8 +2,8 @@
 
 void test(int size)
 {
-    char string[] = "Hello there, Venus";
-    char buffer[19] = "smthing";
+    char string[] = "Hello";
+    char buffer[19] = "there";
     int r;
 
     r = ft_strlcpy(buffer,string,size);
@@ -17,10 +17,10 @@ void test(int size)
 
 int main()
 {
-    test(19);
-    test(10);
-    test(1);
-    test(0);
+    test(5);
+    test(6);
+    test(3);
+    test(2);
 
     return(0);
 }

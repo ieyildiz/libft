@@ -1,7 +1,7 @@
 #include "libft.h"
 
 char    *ft_strjoin(char const *s1, char const *s2)
-{
+/*{
     char *str;
     size_t lenofs1 = ft_strlen(s1);
     size_t lenofs2 = ft_strlen(s2);
@@ -29,5 +29,37 @@ char    *ft_strjoin(char const *s1, char const *s2)
         j++;
         i++;
     }
+    return(str);
+}*/
+{
+    char *str;
+    size_t lenofs1;
+    size_t lenofs2;
+
+    lenofs1 = ft_strlen(s1);
+    lenofs2 = ft_strlen(s2);
+
+    if (!s1 && !s2)
+    {
+        return (ft_strdup(""));
+    }
+    
+    if (s1 && !s2)
+    {
+        return(ft_strdup(s1));
+    }
+
+    if (!s1 && s2)
+    {
+        return(ft_strdup(s2));
+    }
+
+    str = (char *)malloc(sizeof(char) * (lenofs1 + lenofs2 + 1));
+    if (!str)
+    {
+        return (NULL);
+    }
+    ft_strlcpy(str, s1, lenofs1 + 1);
+    ft_strlcat(str, s2, lenofs1 + lenofs2 + 1);
     return(str);
 }

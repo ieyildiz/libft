@@ -14,6 +14,9 @@
 
 size_t  ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
+    /*
+    Stringleri güvenli bir şekilde kopyalamak için
+    */
     if (dst == NULL || src == NULL || dstsize == 0)
     {
         return (0);

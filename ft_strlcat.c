@@ -2,6 +2,9 @@
 
 size_t  ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
+    /*
+    stringleri güvenli bir şekilde birleştirmek için
+    */
     if (dst == NULL || src == NULL || dstsize == 0)
     {
         return (0);
