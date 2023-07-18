@@ -1,30 +1,20 @@
 #include "libft.h"
 
-char *ft_strdup(const char *str) 
+char    *ft_strdup(const char *str) 
 {
-    int     index;
-    int     length;
-    char    *duplicateString;
+    char *duplicateString;
+    size_t len;
 
-    index = 0;
-    size_t length = ft_strlen(str);
+    len = ft_strlen(str) + 1;
 
-    if (str == NULL)
+    duplicateString = (char *)malloc(sizeof(*duplicateString) * len);
+
+    if (!duplicateString)
     {
         return NULL;
     }
-    
-    // Allocate memory for the duplicated string (+1 for null terminator)
-    duplicateString = (char *)malloc((length + 1) * sizeof(*str));
-
-    if (duplicateString != NULL)
+    else
     {
-        while (i < j)
-        {
-            duplicateString[i] = str[i];
-            i++;
-        }
-        str[i] = '\0';
+        return ((char *)ft_memcpy(duplicateString, str, len));
     }
-    return (str);
 }
