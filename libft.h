@@ -25,4 +25,5 @@ void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char *ft_strdup(const char *s1);
 #endif
