@@ -1,20 +1,26 @@
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
+
+// Test işlevi
+void test_ft_strtrim(const char *s1, const char *set)
+{
+    char *result = ft_strtrim(s1, set);
+    printf("Input String: \"%s\"\n", s1);
+    printf("Trim Set: \"%s\"\n", set);
+    printf("Trimmed Result: \"%s\"\n", result ? result : "NULL");
+    free(result);
+}
 
 int main()
 {
-    const char myString[] = "   Hello, World!   ";
-    char* trimmed = ft_strtrim(myString);
+    // Test senaryoları
+    test_ft_strtrim("Hello, world!", "w"); // "Hello, world!"
+    test_ft_strtrim("Hello, world!   ", " "); // "Hello, world!"
+    test_ft_strtrim("   Hello, world!", " "); // "Hello, world!"
+    test_ft_strtrim("Hello, world!", " "); // "Hello, world!"
+    test_ft_strtrim("  Hello,  world!  ", " ,!"); // "Hello"
+    test_ft_strtrim("  ", " "); // ""
 
-    if (trimmed != NULL)
-    {
-        printf("Original String: %s\n", myString);
-        printf("Trimmed string: %s\n", trimmed);
-
-        free(trimmed);
-    }
-    else
-    {
-        printf("Memory allocation failed. \n");
-    }
-    return (0);
+    return 0;
 }

@@ -9,6 +9,7 @@ int main() {
 
     if (ptr != NULL) {
         printf("Found character 'o' at index: %ld\n", ptr - str);
+        printf("%s\n", ptr);
     } else {
         printf("Character 'o' not found.\n");
     }

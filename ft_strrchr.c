@@ -2,6 +2,9 @@
 
 char    *ft_strrchr(const char *s, int c)
 {
+    /*
+    locates the last occurrence of c in the string pointed by s.
+    */
     char newC = (char)c;
 
     int i;
