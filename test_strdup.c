@@ -11,7 +11,7 @@ int main()
     {
         printf("Original sting: %s\n", originalString);
         printf("Duplicated string: %s\n", duplicateString);
-
+        printf("Original sting: %s\n", originalString);
         free(duplicateString);
     }
 
