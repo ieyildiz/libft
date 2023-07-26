@@ -1,6 +1,4 @@
-#include <stdio.h>
-
-int ft_isprint();
+#include "libft.h"
 
 int main(void)
 {

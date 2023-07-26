@@ -1,14 +1,17 @@
 #include "libft.h"
 
-int main() {
-    char source[] = "Vadi Istanbul";
-    char destination[] = "F station 42";
+int main()
+{
+    char dest[] = "hello";
+    char src[] = "world";
 
-    printf("before dest: %s\n", destination);
-    printf("before source: %s\n", source);
-    ft_memcpy(destination, source, sizeof(source));
-    printf("after dest: %s\n", destination);
-    printf("after source: %s\n", source);
+    printf("before dest: %s\n", dest);
+    printf("before src: %s\n", src);
+    
+    ft_memcpy(dest, src, 7);
+
+    printf("after dest: %s\n", dest);
+    printf("after src: %s\n", src);
 
     return (0);
 }

@@ -1,26 +1,15 @@
 #include "libft.h"
 
-void test(int size)
-{
-    char string[] = "Hello";
-    char buffer[19] = "there";
-    int r;
-
-    r = ft_strlcpy(buffer,string,size);
-
-    printf("Copied '%s' into '%s', length %d\n",
-            string,
-            buffer,
-            r
-          );
-}
-
 int main()
 {
-    test(5);
-    test(6);
-    test(3);
-    test(2);
+    char src[] = "hello, world!";
+    char dst[20];
 
-    return(0);
+    size_t len = ft_strlcpy(dst, src, 5);
+
+    printf("kopyalanan string:%s\n"
+    , dst);
+    printf("kopyalan stringin uzunluğu %zu\n"
+    , len);
+    return (0);
 }

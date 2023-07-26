@@ -1,9 +1,7 @@
-#include <stdio.h>
-
-int ft_isalnum();
+#include "libft.h"
 
 int main()
 {
-    printf("%d\n", ft_isalnum(5));
+    printf("%d\n", ft_isalnum(53));
     return (0);
 }

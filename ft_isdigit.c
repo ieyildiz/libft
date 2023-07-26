@@ -13,7 +13,7 @@
 
 int	ft_isdigit(int x)
 {
-    if (x >= 0 && x <= 9)
+    if (x >= 48 && x <= 57)
     {
         return (1);
     }

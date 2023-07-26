@@ -10,8 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_isprint(int c)
 {
+    /*
+    c değerinin yazdırılabilir olmasını kontrol eder.
+    */
     if (c >= 32 && c <= 126)
     {
         return (1);

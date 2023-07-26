@@ -14,6 +14,9 @@
 
 size_t ft_strlen(const char *str)
 {
+    /*
+    stringin uzunluğunu döndürür.
+    */
     int i;
     i = 0;
 

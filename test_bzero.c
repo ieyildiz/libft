@@ -2,11 +2,9 @@
 
 int main()
 {
-    char buffer[10];
-    ft_bzero1(buffer, sizeof(buffer));
-
     char dize[] = "vadi istanbul";
-    ft_bzero1(dize, 5);
+    ft_bzero(dize, 5);
+    dize[5] = '\0';
     printf("after edit: %s\n", dize);
 
     return (0);
